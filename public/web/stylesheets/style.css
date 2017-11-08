@@ -1,11 +1,15 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+.layui-nav{
+  height: 50px;
+  display: flex;
+  /* justify-content:center; */
+  align-items:Center;
+  /* background-color: #00ffaa; */
 }
 
-a {
-  color: #00B7FF;
-}
-.layui-nav-item{
-  
+.layui-main-footer,.layui-fluid-footer{
+  display: flex;
+  justify-content:center;
+  align-items:Center;
+  /* background-color: #00ffaa; */
 }
