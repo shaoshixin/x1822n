@@ -38,18 +38,21 @@ router.get('/addUser', function (req, res, next) {
     });
   });
 });
-//以uid查询用户，注意对查询结果 result的解析username=result[0].username
+//查询用户
 router.get('/getUserById',function(req,res,next){
   pool.getConnection(function(err,connection){
     var params=req.query||req.params;
     connection.query(userSQL.getUserById,[params.uid],function(err,result){
+      var nick = result;
       if(result){
         result={
           code:200,
-          msg:result[0]
+          msg: nick
         };
       }
+      //以JSON形式，把操作结果返回给前台界面
       responseJSON(res, result);
+      //释放连接
       connection.release();
     });
   });
