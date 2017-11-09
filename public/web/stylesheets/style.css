@@ -16,6 +16,7 @@ html {
   display: flex;
   justify-content:flex-start;
   align-items:center;
+  background-color: white;
 }
 .body {
   flex: 1 0 auto;
@@ -23,7 +24,23 @@ html {
   justify-content:center;
   background-color: #f4f8f8;
 }
-
+.login-body{
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  justify-content:center;
+   align-items:center;
+   background-image: url(http://192.168.0.101:3000/web/images/bg1.jpg);
+   background-size:100% 100%;
+   background-repeat:no-repeat;
+}
+.login{
+  display: flex;
+  flex-direction: column;
+  width:450px;
+  height:500px;
+  background-color:white;
+}
 
 .body-index{
   background-color:gray;
