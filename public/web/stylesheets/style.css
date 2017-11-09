@@ -1,15 +1,40 @@
-
+html {
+  height: 100%;
+}
+.body-all {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* position: relative; */
+}
+.header{
+  flex: 0 0 auto;
+  width: 100%;
+}
 .layui-nav{
   height: 50px;
   display: flex;
-  /* justify-content:center; */
-  align-items:Center;
-  /* background-color: #00ffaa; */
+  justify-content:flex-start;
+  align-items:center;
 }
-
-.layui-main-footer,.layui-fluid-footer{
+.body {
+  flex: 1 0 auto;
   display: flex;
   justify-content:center;
-  align-items:Center;
-  /* background-color: #00ffaa; */
+  background-color: #f4f8f8;
+}
+
+
+.body-index{
+  background-color:gray;
+}
+.layui-footer {
+  flex: 0 0 auto;
+  text-align: center;
+}
+.error{
+  display: flex;
+  flex: 1 0 auto;
+  justify-content:center;
+   align-items:center;
 }
