@@ -6,70 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>X41822N</title>
-    <!-- <link href="http://localhost:3000/web/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
-    <!-- <link href="http://192.168.20.176:3000/web/layui/css/layui.css" rel="stylesheet"> -->
-    <!-- <link href="http://192.168.20.176:3000/web/stylesheets/style.css" rel="stylesheet"> -->
-
-    <link href="http://192.168.0.101:3000/web/layui/css/layui.css" rel="stylesheet">
-    <link href="http://192.168.0.101:3000/web/stylesheets/style.css" rel="stylesheet">
-
+    <link href="http://192.168.1.123:3000/web/layui/css/layui.css" rel="stylesheet">
+    <link href="http://192.168.1.123:3000/web/stylesheets/style.css" rel="stylesheet">
 </head>
 
+
 <body class="body-all">
-    <header class="header">
-    </header>
-    <div class="login-body">
-        </br>
-        </br>
-        <div class="login">
-            <form class="layui-form" action="">
-            </br>
-                <div class="layui-form-item">
-                    <label class="layui-form-label">单行输入框</label>
-                    <div class="layui-input-block">
-                        <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input">
+<header class="header"></header>
+<div class="login-body">
+    </br>
+    </br>
+    <div class="login">
+        <form class="layui-form layui-form-login" action="/login/loginSub" method="get">
+            <div class="login-logo">登录：</div>
+
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">账户： </label>
+                    <div class="layui-input-inline">
+                        <!--lay-verify="phone"-->
+                        <input type="tel" name="username" id="login" placeholder=""
+                               autocomplete="off" class="layui-input">
                     </div>
                 </div>
-                <div class="layui-form-item">
-                    <div class="layui-inline">
-                        <label class="layui-form-label">验证手机</label>
-                        <div class="layui-input-inline">
-                            <input type="tel" name="phone" lay-verify="phone" autocomplete="off" class="layui-input">
-                        </div>
-                    </div>
-                    <div class="layui-inline">
-                        <label class="layui-form-label">验证邮箱</label>
-                        <div class="layui-input-inline">
-                            <input type="text" name="email" lay-verify="email" autocomplete="off" class="layui-input">
-                        </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">密码： </label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="password" autocomplete="off" class="layui-input">
                     </div>
                 </div>
-            </form>
-        </div>
-
-        <footer id="footer">
-            <div class="layui-footer" style="display:none">
-                <p>© 2017
-                    <a href="https://github.com/shaoshixin" target="_blank">GitHub</a>
-                </p>
-
             </div>
-        </footer>
-        <!-- <script src="http://localhost:3000/web/jquery-3.2.1.min.js"></script> -->
-        <!-- <script src="http://localhost:3000/web/bootstrap-3.3.7/bootstrap.min.js"></script> -->
-        <!-- <script src="http://192.168.20.176:3000/web/layui/layui.js"></script> -->
-        <script src="http://192.168.0.101:3000/web/layui/layui.js"></script>
-        <script>
-            layui.use('element', function () {
-                var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <button class="layui-btn" type="submit">登录</button>
+                </div>
+            </div>
+        </form>
+        <div class="layui-inline">
+            <button class="layui-btn" lay-submit lay-filter="register">注册</button>
+        </div>
+    </div>
 
-                //监听导航点击
-                // element.on('nav(demo)', function (elem) {
-                //     console.log(elem)
-                //     // layer.msg(elem.text());
-                // });
-            });
-        </script>
+    <footer id="footer">
+        <div class="layui-footer" style="display:none">
+            <p>© 2017
+                <a href="https://github.com/shaoshixin" target="_blank">GitHub</a>
+            </p>
+
+        </div>
+    </footer>
+</div>
+<!-- <script src="http://localhost:3000/web/jquery-3.2.1.min.js"></script> -->
+    <script src="http://192.168.1.123:3000/web/layui/layui.js"></script>
+    <script src="http://192.168.1.123:3000/web/js/js.js"></script>
+<script>
+layui.use('element', function () {
+        var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+
+        //监听导航点击
+        // element.on('nav(demo)', function (elem) {
+        //     console.log(elem)
+        //     // layer.msg(elem.text());
+        // });
+    });
+
+</script>
 </body>
 
 </html>

@@ -30,16 +30,24 @@ html {
   flex-direction: column;
   justify-content:center;
    align-items:center;
-   background-image: url(http://192.168.0.101:3000/web/images/bg1.jpg);
+   background-image: url(http://192.168.1.123:3000/web/images/bg1.jpg);
    background-size:100% 100%;
    background-repeat:no-repeat;
 }
 .login{
   display: flex;
   flex-direction: column;
-  width:450px;
+  width:400px;
   height:500px;
   background-color:white;
+}
+.login-logo{
+  margin-bottom: 10px;
+}
+.layui-form-login{
+  display:flex;
+  flex-direction: column;
+  padding: 30px;
 }
 
 .body-index{
