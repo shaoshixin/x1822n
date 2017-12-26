@@ -1,16 +1,19 @@
 html {
   height: 100%;
 }
+/*整个页面的样式，包括头部，中间主体和页脚*/
 .body-all {
   display: flex;
   flex-direction: column;
   height: 100%;
   /* position: relative; */
 }
+/*头部，主要是宽度100%防止中间没有*/
 .header{
   flex: 0 0 auto;
   width: 100%;
 }
+/*修改了头部的一些信息，高度设置为50px*/
 .layui-nav{
   height: 50px;
   display: flex;
@@ -18,22 +21,25 @@ html {
   align-items:center;
   background-color: #0b7d80;
 }
+/*中间主体*/
 .body {
   flex: 1 0 auto;
   display: flex;
   justify-content:center;
   background-color: #f4f8f8;
 }
+/*整个登录界面，背景等*/
 .login-body{
   display: flex;
   flex: 1 0 auto;
   flex-direction: column;
   justify-content:center;
    align-items:center;
-   background-image: url(http://192.168.20.176:3000/web/images/bg1.jpg);
+   background-image: url(http://192.168.1.123:3000/web/images/bg1.jpg);
    background-size:100% 100%;
    background-repeat:no-repeat;
 }
+/*中间的登录小窗口，居中*/
 .login{
   display: flex;
   flex-direction: column;
@@ -41,9 +47,11 @@ html {
   height:500px;
   background-color:white;
 }
+
 .login-logo{
   margin-bottom: 10px;
 }
+
 .layui-form-login{
   display:flex;
   flex-direction: column;
@@ -51,7 +59,11 @@ html {
 }
 
 .body-index{
+  width:1200px;
   background-color:gray;
+}
+.body.body-right,.body-left{
+  align-self:stretch;
 }
 .layui-footer {
   flex: 0 0 auto;

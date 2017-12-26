@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Layui-Learning - 学习历程</title>
+    <link href="favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="http://192.168.1.123:3000/web/layui/css/layui.css">
+</head>
+<body>
+    <div class="layui-tab" lay-filter="demo">
+        <ul class="layui-tab-title">
+            <li class="layui-this">网站设置</li>
+            <li>商品管理</li>
+            <li>订单管理</li>
+        </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">内容1</div>
+            <div class="layui-tab-item">内容2</div>
+            <div class="layui-tab-item">内容3</div>
+        </div>
+    </div>
+</body>
+<script src="http://192.168.1.123:3000/web/layui/layui.js"></script>
+<script>
+    layui.use(['element','layer'], function(){
+        var element = layui.element;
+        var layer= layui.layer;
+        //一些事件监听
+        element.on('tab(demo)', function(data){
+            console.log(data);
+            layer.msg('we');
+        });
+    });
+
+    //    layui.use(['element', 'layer'], function () {
+//        var element = layui.element;
+//        var layer = layui.layer;
+//        layer.msg("测试", {icon: 1});
+//        element.on('tab(main-menu)', function (data) {
+//            console.log(this, "tab" + data);
+//        });
+//    });
+</script>
+</html>
