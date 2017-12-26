@@ -6,45 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>X41822N</title>
-    <link href="http://192.168.1.123:3000/web/layui/css/layui.css" rel="stylesheet">
-    <link href="http://192.168.1.123:3000/web/stylesheets/style.css" rel="stylesheet">
+    <link href="http://192.168.20.176:3000/web/layui/css/layui.css" rel="stylesheet">
+    <link href="http://192.168.20.176:3000/web/stylesheets/style.css" rel="stylesheet">
 </head>
 
 
 <body class="body-all">
 <header class="header"></header>
 <div class="login-body">
-    </br>
-    </br>
     <div class="login">
-        <form class="layui-form layui-form-login" action="/login/loginSub" method="get">
+
+        <form class="layui-form layui-form-login" method="get">
             <div class="login-logo">登录：</div>
 
             <div class="layui-form-item">
                 <div class="layui-inline">
                     <label class="layui-form-label">账户： </label>
                     <div class="layui-input-inline">
-                        <!--lay-verify="phone"-->
-                        <input type="tel" name="username" id="login" placeholder=""
-                               autocomplete="off" class="layui-input">
+                        <input type="text" lay-verify="required" name="username" placeholder="用户名"
+                               autocomplete="on" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-inline">
                     <label class="layui-form-label">密码： </label>
                     <div class="layui-input-inline">
-                        <input type="text" name="password" autocomplete="off" class="layui-input">
+                        <input type="password" name="password" autocomplete="off" placeholder="******"
+                               class="layui-input">
                     </div>
                 </div>
             </div>
-            <div class="layui-form-item">
+            <div class="layui-form-item"style="margin-top: 10px">
                 <div class="layui-inline">
-                    <button class="layui-btn" type="submit">登录</button>
+                    <button class="layui-btn"style="margin-left: 50px" lay-submit lay-filter="btn-login" type="submite">登录</button>
+                </div>
+                <div class="layui-inline">
+                    <a class="layui-btn"style="margin-left: 108px" href="https://www.baidu.com">注册</a>
                 </div>
             </div>
         </form>
-        <div class="layui-inline">
-            <button class="layui-btn" lay-submit lay-filter="register">注册</button>
-        </div>
+
     </div>
 
     <footer id="footer">
@@ -56,21 +56,8 @@
         </div>
     </footer>
 </div>
-<!-- <script src="http://localhost:3000/web/jquery-3.2.1.min.js"></script> -->
-    <script src="http://192.168.1.123:3000/web/layui/layui.js"></script>
-    <script src="http://192.168.1.123:3000/web/js/js.js"></script>
-<script>
-layui.use('element', function () {
-        var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
-
-        //监听导航点击
-        // element.on('nav(demo)', function (elem) {
-        //     console.log(elem)
-        //     // layer.msg(elem.text());
-        // });
-    });
-
-</script>
+<script src="http://192.168.20.176:3000/web/layui/layui.js"></script>
+<script src="http://192.168.20.176:3000/web/js/js.js"></script>
 </body>
 
 </html>

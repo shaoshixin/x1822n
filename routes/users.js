@@ -39,10 +39,10 @@ router.get('/addUser', function (req, res, next) {
   });
 });
 //查询用户
-router.get('/getUserById',function(req,res,next){
+router.get('/getUserByUsername',function(req,res){
   pool.getConnection(function(err,connection){
     var params=req.query||req.params;
-    connection.query(userSQL.getUserById,[params.uid],function(err,result){
+    connection.query(userSQL.getUserByUsername,[params.username],function(err,result){
       var nick = result;
       if(result){
         result={

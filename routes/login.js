@@ -18,21 +18,35 @@ var responseJSON = function (res, ret) {
     }
 };
 
-router.get('/',function (req,res,next) {
+router.get('/',function (req,res) {
     res.render('web/login/login');
 });
+router.get('/register',function (req,res) {
+    res.render('web/login/register');
+});
+//登录验证
 router.get('/loginSub',function (req,res) {
     pool.getConnection(function(err,connection){
         var params=req.query||req.params;
-        connection.query(userSQL.getUserById,[params.username],function(err,result){
-            var nick = result;
-            if(result){
-                result={
-                    code:200,
-                    msg: nick
-                };
+        connection.query(userSQL.login,[params.username,params.password],function(err,result){
+            if(result.length === 0 ){
+               result={
+                   code:'-200',
+                   msg:'登陆失败',
+               }
+
             }
-            //以JSON形式，把操作结果返回给前台界面
+            else {
+                nickname=result[0].nickname;
+                result={
+                    code:'200',
+                    msg:"登陆成功！",
+                    昵称:nickname,
+                }
+                //res.render('web/index');
+            }
+            //以JSON形式，把操作结果返回给前台界面.
+
             responseJSON(res, result);
             //释放连接
             connection.release();

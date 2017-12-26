@@ -16,7 +16,7 @@ html {
   display: flex;
   justify-content:flex-start;
   align-items:center;
-  background-color: white;
+  background-color: #0b7d80;
 }
 .body {
   flex: 1 0 auto;
@@ -30,7 +30,7 @@ html {
   flex-direction: column;
   justify-content:center;
    align-items:center;
-   background-image: url(http://192.168.1.123:3000/web/images/bg1.jpg);
+   background-image: url(http://192.168.20.176:3000/web/images/bg1.jpg);
    background-size:100% 100%;
    background-repeat:no-repeat;
 }
