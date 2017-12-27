@@ -35,7 +35,7 @@ html {
   flex-direction: column;
   justify-content:center;
    align-items:center;
-   background-image: url(http://192.168.1.123:3000/web/images/bg1.jpg);
+   background-image: url(http://192.168.10.133:3000/web/images/bg1.jpg);
    background-size:100% 100%;
    background-repeat:no-repeat;
 }

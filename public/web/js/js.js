@@ -8,19 +8,36 @@ layui.use(['form', 'layer', 'element'], function () {
         console.log(elem);
         layer.msg("123");
     });
+    //监听登录提交提交
     form.on('submit(btn-login)', function (data) {
-        data.form.action = "login/loginSub";
-        data.form.submit();
+        $.ajax({
+            type: 'POST',
+            url: 'login/loginSub',
+            cache: false,
+            async: false,
+            dataType: 'json',
+            data: data.field
+        }).done(function (res) {
+            if (res.code == 200) {
+                layer.msg('登录成功，正在跳转……', {icon: 1});
+                location.href = "/";
+            } else {
+                layer.alert('用户名或密码错误!');
+            }
+        });
+        return false;
     });
-    // $(document).on('click','#btn-login',function () {
-    //     document.login_form.action = "login/loginSub";
-    //     document.login_form.submit();
+    // form.on('submit(btn-login)', function (data) {
+    //     data.form.action = "login/loginSub";
+    //     data.form.submit();
     // });
-    $(document).on('click','#btn-register',function () {
+    //阻止注册按钮提交，绑定新事件
+    $(document).on('click', '#btn-register', function () {
         //阻止表单提交，显示注册界面
-        var event = event || window.event;
-        event.preventDefault(); // 兼容标准浏览器
-        window.event.returnValue = false; // 兼容IE6~8
-       layer.msg("注册");
+        // var event = event || window.event;
+        // window.event.returnValue = false; // 兼容IE6~8
+        // event.preventDefault(); // 兼容标准浏览器
+        layer.alert("注册");
+        return false;//layui的阻止表单提交
     });
 });
