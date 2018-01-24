@@ -25,6 +25,29 @@ router.get('/',function (req,res) {
 router.get('/register',function (req,res) {
     res.render('web/login/register');
 });
+
+//注册用户
+router.post('/addUser', function (req, res, next) {
+    //从连接池获取连接
+    pool.getConnection(function (err, connection) {
+        //获取从前台传来的数据
+        var param = req.body;
+        //建立连接 增加一个用户信息
+        connection.query(userSQL.insert, [param.username, param.password, param.nickname], function (err, result) {
+            if (result) {
+                result = {
+                    code: 200,
+                    msg: '增加成功'
+                };
+            }
+            //以JSON形式，把操作结果返回给前台界面
+            responseJSON(res, result);
+            //释放连接
+            connection.release();
+
+        });
+    });
+});
 //登录验证
 router.post('/loginSub',function (req,res) {
     pool.getConnection(function(err,connection){

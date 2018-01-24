@@ -37,7 +37,34 @@ layui.use(['form', 'layer', 'element'], function () {
         // var event = event || window.event;
         // window.event.returnValue = false; // 兼容IE6~8
         // event.preventDefault(); // 兼容标准浏览器
-        layer.alert("注册");
+        layer.open({
+            type:2,
+            title:'注册',
+            content:'login/register',
+            area: ['400px', '500px']
+        });
+
+
+        //layer.alert("注册");
         return false;//layui的阻止表单提交
+    });
+    //监听注册提交
+    form.on('submit(btn-register-sub)', function (data) {
+        $.ajax({
+            type: 'POST',
+            url: 'addUser',
+            cache: false,
+            async: false,
+            dataType: 'json',
+            data: data.field
+        }).done(function (res) {
+            if (res.code == 200) {
+                layer.msg('注册成功', {icon: 1});
+                location.href = "/";
+            } else {
+                layer.alert('请检查后重新注册！');
+            }
+        });
+        return false;
     });
 });

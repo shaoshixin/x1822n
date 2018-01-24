@@ -28,16 +28,26 @@ html {
   justify-content:center;
   background-color: #f4f8f8;
 }
-/*整个登录界面，背景等*/
-.login-body{
+/*整个注册界面*/
+.login-body,.login-body{
   display: flex;
   flex: 1 0 auto;
   flex-direction: column;
   justify-content:center;
-   align-items:center;
-   background-image: url(http://192.168.10.133:3000/web/images/bg1.jpg);
-   background-size:100% 100%;
-   background-repeat:no-repeat;
+  align-items:center;
+  background-size:100% 100%;
+  background-repeat:no-repeat;
+}
+/*整个登录界面，背景等*/
+.login-body{
+  /*display: flex;*/
+  /*flex: 1 0 auto;*/
+  /*flex-direction: column;*/
+  /*justify-content:center;*/
+   /*align-items:center;*/
+   background-image: url(http://192.168.20.176:3000/web/images/bg1.jpg);
+   /*background-size:100% 100%;*/
+   /*background-repeat:no-repeat;*/
 }
 /*中间的登录小窗口，居中*/
 .login{

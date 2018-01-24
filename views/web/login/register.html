@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="http://192.168.20.176:3000/web/layui/css/layui.css" rel="stylesheet">
+    <link href="http://192.168.20.176:3000/web/stylesheets/style.css" rel="stylesheet">
+</head>
+<body>
+<form class="layui-form layui-form-login" name="register_form" method="post">
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label">账户： </label>
+            <div class="layui-input-inline">
+                <input type="text" lay-verify="required" name="username" placeholder="用户名"
+                       autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label">昵称： </label>
+            <div class="layui-input-inline">
+                <input type="text" lay-verify="required" name="nickname" placeholder="昵称"
+                       autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label">密码： </label>
+            <div class="layui-input-inline">
+                <input type="password" name="password" autocomplete="off" placeholder="******"
+                       class="layui-input">
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label">确认： </label>
+            <div class="layui-input-inline">
+                <input type="passwordC" name="password" autocomplete="off" placeholder="******"
+                       class="layui-input">
+            </div>
+        </div>
+    </div>
+    <div class="layui-form-item"style="margin-top: 10px">
+        <div class="layui-inline">
+            <button class="layui-btn"style="margin-left: 50px" lay-submit lay-filter="btn-register-sub">注册</button>
+            <button class="layui-btn"style="margin-left: 108px" id="btn-register-back">返回</button>
+        </div>
+    </div>
+</form>
+<script src="http://192.168.20.176:3000/web/layui/layui.all.js"></script>
+<script src="http://192.168.20.176:3000/web/js/js.js"></script>
+</body>
+</html>
